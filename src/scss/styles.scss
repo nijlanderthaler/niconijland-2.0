@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+body {
+  position: relative;
+  background: #1c1e22;
+  font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron {
+  position: relative;
+  height: 475px;
+  background-image: url("https://raw.githubusercontent.com/nijlanderthaler/FWWU-comingsoon/2a52d2216b3c45bf675a64ba73af23de06d8edbb/images/deadsea.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  margin-top: 50px;
+}
+
+.jmb-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+.opacity-text {
+  opacity: 0.8;
+}
+
+#about {
+  padding: 1rem 0 4rem;
+}
+
+.portfolio-bg {
+  background: #fff;
+}
+
+.form-control {
+  background-color: #1c1e22;
+  border-color: #f8f9fa;
+}
+
+.foot-link {
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .social {
+    top: 30%;
+    right: 3%;
+    transform: translateY(-50%);
+  }
+
+  .card-1,
+  .card-3 {
+    padding-right: 3rem !important;
+  }
+
+  .card-1 {
+    padding-bottom: 0 !important;
+  }
+
+  .card-2,
+  .card-4 {
+    padding-left: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .jumbotron {
+    height: 300px;
+  }
+
+  .foot-link {
+    margin: 0 0.5rem;
+  }
+}
