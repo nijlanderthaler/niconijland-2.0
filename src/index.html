@@ -37,88 +37,114 @@
     </div>
   </nav>
 
-  <div class="jumbotron">
-    <div class="container jmb-text text-center text-white">
-      <h4>nico<strong>nijland</strong>.com</h4>
-      <h5>Front end development</h5>
+  <div class="jumbotron mb-0 jumbotron-fluid">
+    <div class="container d-flex justify-content-center">
+      <div class="jumbo-text text-light">
+        <div class="text-center">
+          <h1 class="display-3 mb-0">N</h1>
+          <h1 class="display-3 mb-0">N</h1>
+        </div>
+        <h4 class="text-center">Front End Developer</h4>
+        <div class="mt-3 text-center">
+          <button class="btn one btn-outline-light btn-sm">Push me</button>
+          <button class="btn two btn-outline-light btn-sm">Press me</button>
+        </div>
+      </div>
     </div>
-    <ul class="nav social flex-column">
-      <li class="my-2 nav-item">
-        <a class="nav-link btn btn-outline-light btn-sm text-left" href="https://www.facebook.com/NicoNijland"><i class="fa fa-facebook-square" aria-hidden="true"></i> facebook</a>
-      </li>
-      <li class="my-2 nav-item">
-        <a class="nav-link btn btn-outline-light btn-sm text-left" href="https://nl.linkedin.com/in/nico-nijland"><i class="fa fa-linkedin-square" aria-hidden="true"></i> linkedin</a>
-      </li>
-      <li class="my-2 nav-item">
-        <a class="nav-link btn btn-outline-light btn-sm text-left" href="https://github.com/nijlanderthaler"><i class="fa fa-github-square" aria-hidden="true"></i> github</a>
-      </li>
-    </ul>
   </div>
 
-  <div id="about" class="mb-4 container">
-    <h4 class="mb-4 text-center text-light opacity-text">About:</h4>
+  <div id="about" class="py-5 container-fluid">
+    <h5 class="mb-4 text-center text-light opacity-text">About:</h5>
     <div class="row">
-      <div class="col-md-4 my-3 text-center">
+      <div class="col-md-3 my-3 text-center">
         <img src="https://github.com/nijlanderthaler/niconijland-com/blob/master/img/overloon-2.jpg?raw=true" class="mb-3 image-fluid rounded" style="width: 160px">
       </div>
-      <div class="col-md-8 text-light opacity-text">
+      <div class="col-md-6 text-light">
         <p class="m-3">Welcome folks! What you see here is my portfolio site. It’s made with Bootstrap 4.
                  This framework rules! I’m a historian gone frond end developer. Sounds far-fetched?
                  Well, I went from language to code. That’s certainly a big jump. On the other hand,
                  I’m still knee-deep in characters and information. I like that, I might be nuts.</p>
       </div>
+      <div class="col-md-3">
+        <ul class="nav social flex-column">
+          <li class="my-2 nav-item">
+            <a class="nav-link btn btn-outline-light btn-sm text-center" href="https://www.facebook.com/NicoNijland"><i class="fa fa-facebook-square" aria-hidden="true"></i> facebook</a>
+          </li>
+          <li class="my-2 nav-item">
+            <a class="nav-link btn btn-outline-light btn-sm text-center" href="https://nl.linkedin.com/in/nico-nijland"><i class="fa fa-linkedin-square" aria-hidden="true"></i> linkedin</a>
+          </li>
+          <li class="my-2 nav-item">
+            <a class="nav-link btn btn-outline-light btn-sm text-center" href="https://github.com/nijlanderthaler"><i class="fa fa-github-square" aria-hidden="true"></i> github</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
-   <div id="work" class="py-5 container-fluid portfolio-bg">
-     <h4 class="text-center text-dark">Work:</h4>
-      <div class="row">
-        <div class="col-md-6 py-5 pl-5 pr-4 card-1">
-          <div class="card">
-            <a href="http://www.firewalkwithus.com"><img class="card-img-top image-responsive" src="https://github.com/nijlanderthaler/FWWU-comingsoon/blob/master/images/fwwu-fullsite.jpg?raw=true" alt="Card image"></a>
+   <div id="work" class="py-5 container-fluid work-bg">
+     <h5 class="text-center text-dark">Work:</h5>
+      <div class="row my-4">
+
+        <div class="col-md-4 p-4">
+          <div class="card rounded-0">
+            <a href="http://www.firewalkwithus.com"><img class="card-img-top image-responsive rounded-0" src="https://github.com/nijlanderthaler/FWWU-comingsoon/blob/master/images/fwwu-fullsite.jpg?raw=true" alt="Card image"></a>
           <div class="card-body">
-            <p class="card-text">firewalkwithus.com</p>
+            <p class="card-text">firewalkwithus.com - full page</p>
+            <!-- info show -->
+            <div class="info-show">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est saepe dolores ipsa enim hic sint labore, distinctio! Odit eaque adipisci sequi, sapiente eum tempore ipsum molestias veritatis at voluptas fugit perspiciatis quaerat quas. Eos officia incidunt modi maxime, assumenda provident neque reiciendis. Amet dolorum consectetur, temporibus rerum doloribus, aliquam in magnam. Odit, tempora? Fugiat dignissimos doloremque possimus, sit pariatur, eveniet expedita mollitia alias veniam deserunt nostrum et ex ipsum.</p>
+            </div>
+            <!-- button info-show -->
+            <div class="mt-4 text-center">
+              <button href="#" class="btn expand btn-outline-dark btn-sm">More info</button>
+            </div>
           </div>
          </div>
         </div>
-        <div class="col-md-6 py-5 pr-5 pl-4 card-2">
-          <div class="card">
-            <a href="http://www.firewalkwithus.com"><img class="card-img-top image-responsive" src="https://github.com/nijlanderthaler/FWWU-comingsoon/blob/master/images/fwwu-fullsite.jpg?raw=true" alt="Card image"></a>
+
+        <div class="col-md-4 p-4">
+          <div class="card rounded-0">
+            <a href="http://www.firewalkwithus.com"><img class="card-img-top image-responsive rounded-0" src="https://github.com/nijlanderthaler/FWWU-comingsoon/blob/master/images/fwwu-fullsite.jpg?raw=true" alt="Card image"></a>
           <div class="card-body">
-            <p class="card-text">firewalkwithus.com</p>
+            <p class="card-text">niconijland.com - first version</p>
+            <!-- info show -->
+            <div class="info-show">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est saepe dolores ipsa enim hic sint labore, distinctio! Odit eaque adipisci sequi, sapiente eum tempore ipsum molestias veritatis at voluptas fugit perspiciatis quaerat quas. Eos officia incidunt modi maxime, assumenda provident neque reiciendis. Amet dolorum consectetur, temporibus rerum doloribus, aliquam in magnam. Odit, tempora? Fugiat dignissimos doloremque possimus, sit pariatur, eveniet expedita mollitia alias veniam deserunt nostrum et ex ipsum.</p>
+            </div>
+            <!-- button info-show -->
+            <div class="mt-4 text-center">
+              <button href="#" class="btn expand btn-outline-dark btn-sm">More info</button>
+            </div>
           </div>
          </div>
        </div>
-     </div>
 
-     <div class="row">
-        <div class="col-md-6 pb-5 pl-5 pr-4 card-3">
-          <div class="card">
-            <a href="http://www.firewalkwithus.com"><img class="card-img-top image-responsive" src="https://github.com/nijlanderthaler/FWWU-comingsoon/blob/master/images/fwwu-fullsite.jpg?raw=true" alt="Card image"></a>
-          <div class="card-body">
-            <p class="card-text">firewalkwithus.com</p>
-          </div>
+       <div class="col-md-4 p-4">
+         <div class="card rounded-0">
+           <a href="http://www.firewalkwithus.com"><img class="card-img-top image-responsive rounded-0" src="https://github.com/nijlanderthaler/FWWU-comingsoon/blob/master/images/fwwu-fullsite.jpg?raw=true" alt="Card image"></a>
+         <div class="card-body">
+           <p class="card-text">firewalkwithus.com - coming soon template</p>
+           <!-- info show -->
+           <div class="info-show">
+             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est saepe dolores ipsa enim hic sint labore, distinctio! Odit eaque adipisci sequi, sapiente eum tempore ipsum molestias veritatis at voluptas fugit perspiciatis quaerat quas. Eos officia incidunt modi maxime, assumenda provident neque reiciendis. Amet dolorum consectetur, temporibus rerum doloribus, aliquam in magnam. Odit, tempora? Fugiat dignissimos doloremque possimus, sit pariatur, eveniet expedita mollitia alias veniam deserunt nostrum et ex ipsum.</p>
+           </div>
+           <!-- button info-show -->
+           <div class="mt-4 text-center">
+             <button href="#" class="btn expand btn-outline-dark btn-sm">More info</button>
+           </div>
          </div>
         </div>
-        <div class="col-md-6 pb-5 pr-5 pl-4 card-4">
-          <div class="card">
-            <a href="http://www.firewalkwithus.com"><img class="card-img-top image-responsive" src="https://github.com/nijlanderthaler/FWWU-comingsoon/blob/master/images/fwwu-fullsite.jpg?raw=true" alt="Card image"></a>
-          <div class="card-body">
-            <p class="card-text">firewalkwithus.com</p>
-          </div>
-         </div>
        </div>
      </div>
-
     </div>
 
     <div id="contact" class="py-5 container-fluid">
-      <h4 class="text-center text-white opacity-text">Contact me:</h4>
+      <h5 class="text-center text-white opacity-text">Contact me:</h5>
       <div class="row">
 
-        <div class="col-md-3"></div>
+        <div class="col-md-3 col-lg-4"></div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <form class="text-center">
             <div class="mb-0 form-group">
               <label for="usr"></label>
@@ -136,7 +162,7 @@
           </form>
       </div> <!--form div-->
 
-      <div class="col-md-3"></div>
+      <div class="col-md-3 col-lg-4"></div>
     </div> <!--row contact -->
   </div>
 
