@@ -11,6 +11,25 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -54px; // adjust according to nav height and/or padding
+  @include mQ(875px) {
+    top: -220px;
+  }
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
 .jumbotron {
   position: relative;
   height: 100vh;
@@ -39,7 +58,7 @@ body {
     }
   }
 
-  h1 {
+  h1, h4 {
     display: inline-block;
   }
 
