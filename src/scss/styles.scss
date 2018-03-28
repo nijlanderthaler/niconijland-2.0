@@ -11,6 +11,10 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.header {
+  opacity: 0.8;
+}
+
 .headroom {
   position: fixed;
   top: 0;
@@ -61,29 +65,41 @@ body {
   h1, h4 {
     display: inline-block;
   }
-
-  .one {
-    margin-right: 10px;
-  }
-
-  .two {
-    margin-left: 10px;
-  }
 }
 
 .work-bg {
-  background: #fff;
+  background: #fdfdfd;
   .info-show {
     display: none;
   }
+  h2 {
+    font-size: 4rem;
+  }
+  .card-img-top {
+    height: 25vw;
+  }
+  @include mQ(768px) {
+    .card-img-top {
+    height: auto;
+    }
+  }
+}
+
+.about-image {
+  background-image: url("https://github.com/nijlanderthaler/niconijland-com/blob/master/img/overloon-2.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .social {
-  font-size: 2rem;
+  .btn-sm {
+    padding: 0.3rem 0.7rem;
+  }
 }
 
 .opacity-text {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 

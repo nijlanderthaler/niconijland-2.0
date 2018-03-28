@@ -1,4 +1,5 @@
 // Custom jQuery
+// remember DRY do not repeat yourself!!
 
 // headroom.js
 $(".fixed-top").headroom({
