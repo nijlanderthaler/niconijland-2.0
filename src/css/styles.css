@@ -6182,6 +6182,9 @@ body {
   position: relative;
   background: #1c1e22;
   font-family: 'Raleway', sans-serif; }
+  html .btn,
+  body .btn {
+    border-radius: 0; }
 
 .header {
   opacity: 0.8; }
@@ -6215,17 +6218,46 @@ body {
       background-image: url("../assets/deadsea-small.jpg"); } }
   .jumbotron .jumbo-text {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0.9; }
-    @media screen and (max-width: 768px) and (orientation: portrait) {
-      .jumbotron .jumbo-text h1 {
-        font-size: 4rem; }
-      .jumbotron .jumbo-text h4 {
-        font-size: 1.2rem; } }
-  .jumbotron h1, .jumbotron h4 {
-    display: inline-block; }
+    opacity: 0.9;
+    font-size: 1.5rem; }
+    .jumbotron .jumbo-text span {
+      display: inline-block; }
+    .jumbotron .jumbo-text .reg-text {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 3.33333s ease-out, opacity 5s ease; }
+      .jumbotron .jumbo-text .reg-text.loaded {
+        opacity: 1;
+        transform: translateY(0); }
+    .jumbotron .jumbo-text .letter {
+      transition: transform 5s cubic-bezier(0.43, 0.1, 0.57, 0.9), filter 5s ease, opacity 5s ease;
+      opacity: 0;
+      filter: blur(5px);
+      /*&:nth-of-type(6) {
+          filter: blur(0);
+          transform: translateY($fallDown + 20px);
+          transition-duration: $duration/2.3;
+      }*/ }
+      .jumbotron .jumbo-text .letter:nth-of-type(2) {
+        transform: translateY(-160px);
+        transition-duration: 2.5s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(3) {
+        filter: blur(0);
+        transform: translateY(-170px);
+        transition-duration: 3.84615s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(4) {
+        transform: translateY(-200px);
+        transition-duration: 3.33333s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(5) {
+        transform: translateY(-150px);
+        transition-duration: 2.5s; }
+      .jumbotron .jumbo-text .letter.loaded {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0); }
 
 .work-bg {
   background: #fdfdfd; }
@@ -6253,7 +6285,8 @@ body {
 
 .form-control {
   background-color: #1c1e22;
-  border-color: #f8f9fa; }
+  border-color: #f8f9fa;
+  border-radius: 0; }
 
 .foot-link {
   font-size: 1.5rem;
