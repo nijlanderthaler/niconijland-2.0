@@ -6218,29 +6218,42 @@ body {
       background-image: url("../assets/deadsea-small.jpg"); } }
   .jumbotron .jumbo-text {
     position: absolute;
-    top: 75%;
+    top: 76%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0.9;
-    font-size: 1.5rem; }
+    font-size: 1.7rem;
+    /*.middle-text {
+      transform: translate(-100px, $fadeUpMiddle);
+      opacity: 0;
+      transition: transform $duration / 1.8 ease-out, opacity $duration ease;
+
+      &.loaded {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }*/ }
     .jumbotron .jumbo-text span {
       display: inline-block; }
-    .jumbotron .jumbo-text .reg-text {
-      transform: translateY(100px);
+    .jumbotron .jumbo-text .up-text {
+      transform: translateY(-200px);
       opacity: 0;
       transition: transform 3.33333s ease-out, opacity 5s ease; }
-      .jumbotron .jumbo-text .reg-text.loaded {
+      .jumbotron .jumbo-text .up-text.loaded {
+        opacity: 1;
+        transform: translateY(0); }
+    .jumbotron .jumbo-text .down-text {
+      transform: translateY(100px);
+      opacity: 0;
+      font-weight: bold;
+      transition: transform 3.33333s ease-out, opacity 5s ease; }
+      .jumbotron .jumbo-text .down-text.loaded {
         opacity: 1;
         transform: translateY(0); }
     .jumbotron .jumbo-text .letter {
       transition: transform 5s cubic-bezier(0.43, 0.1, 0.57, 0.9), filter 5s ease, opacity 5s ease;
       opacity: 0;
-      filter: blur(5px);
-      /*&:nth-of-type(6) {
-          filter: blur(0);
-          transform: translateY($fallDown + 20px);
-          transition-duration: $duration/2.3;
-      }*/ }
+      filter: blur(5px); }
       .jumbotron .jumbo-text .letter:nth-of-type(2) {
         transform: translateY(-160px);
         transition-duration: 2.5s; }
@@ -6254,10 +6267,44 @@ body {
       .jumbotron .jumbo-text .letter:nth-of-type(5) {
         transform: translateY(-150px);
         transition-duration: 2.5s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(6) {
+        filter: blur(0);
+        transform: translateY(-180px);
+        transition-duration: 2.17391s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(7) {
+        transform: translateY(100px);
+        transition-duration: 2.5s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(8) {
+        filter: blur(0);
+        transform: translateY(80px);
+        transition-duration: 2.27273s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(9) {
+        transform: translateY(50px);
+        transition-duration: 2.63158s; }
+      .jumbotron .jumbo-text .letter:nth-of-type(10) {
+        filter: blur(0);
+        transform: translateY(60px);
+        transition-duration: 2.94118s; }
       .jumbotron .jumbo-text .letter.loaded {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0); }
+    .jumbotron .jumbo-text .subtitle {
+      font-size: 1.4rem; }
+    .jumbotron .jumbo-text .left-text {
+      transform: translateX(-150px);
+      opacity: 0;
+      transition: transform 3.33333s ease-out, opacity 5s ease; }
+      .jumbotron .jumbo-text .left-text.loaded {
+        opacity: 1;
+        transform: translateX(0); }
+    .jumbotron .jumbo-text .right-text {
+      transform: translateX(150px);
+      opacity: 0;
+      transition: transform 4.16667s ease-out, opacity 5s ease; }
+      .jumbotron .jumbo-text .right-text.loaded {
+        opacity: 1;
+        transform: translateX(0); }
 
 .work-bg {
   background: #fdfdfd; }
@@ -6291,7 +6338,6 @@ body {
 .foot-link {
   font-size: 1.5rem;
   padding: 0; }
-
-@media screen and (max-width: 576px) {
-  .foot-link {
-    margin: 0 0.5rem; } }
+  @media screen and (max-width: 576px) and (orientation: portrait) {
+    .foot-link {
+      margin: 0 0.5rem; } }

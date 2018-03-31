@@ -52,21 +52,33 @@ body {
 
   .jumbo-text {
     position: absolute;
-    top: 75%;
+    top: 76%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0.9;
-    font-size: 1.5rem;
-    //letter-spacing: 1px;
+    font-size: 1.7rem;
+    //letter-spacing: 4px;
 
     span {
       display: inline-block;
     }
 
-    .reg-text {
+    .up-text {
+      transform: translateY($fallDown);
+      opacity: 0;
+      transition: transform $duration / 1.5 ease-out, opacity $duration ease;
+
+      &.loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .down-text {
       transform: translateY($fadeUp);
       opacity: 0;
-      transition: transform $duration/1.5 ease-out, opacity $duration ease;
+      font-weight: bold;
+      transition: transform $duration / 1.5 ease-out, opacity $duration ease;
 
       &.loaded {
         opacity: 1;
@@ -80,53 +92,118 @@ body {
       filter: blur(5px);
 
       &:nth-of-type(2) {
-      transform: translateY($fallDown + 40px);
-      transition-duration: $duration / 2;
+       transform: translateY($fallDown + 40px);
+       transition-duration: $duration / 2;
       }
 
       &:nth-of-type(3) {
-          filter: blur(0);
-          transform: translateY($fallDown + 30px);
-          transition-duration: $duration / 1.3;
+        filter: blur(0);
+        transform: translateY($fallDown + 30px);
+        transition-duration: $duration / 1.3;
       }
 
       &:nth-of-type(4) {
-          transform: translateY($fallDown);
-          transition-duration: $duration / 1.5;
+        transform: translateY($fallDown);
+        transition-duration: $duration / 1.5;
       }
 
       &:nth-of-type(5) {
-          transform: translateY($fallDown + 50px);
-          transition-duration: $duration / 2;
+        transform: translateY($fallDown + 50px);
+        transition-duration: $duration / 2;
       }
 
-      /*&:nth-of-type(6) {
-          filter: blur(0);
-          transform: translateY($fallDown + 20px);
-          transition-duration: $duration/2.3;
-      }*/
+      &:nth-of-type(6) {
+        filter: blur(0);
+        transform: translateY($fallDown + 20px);
+        transition-duration: $duration / 2.3;
+      }
+
+      &:nth-of-type(7) {
+        transform: translateY($fadeUpMiddle);
+        transition-duration: $duration / 2;
+      }
+
+      &:nth-of-type(8) {
+        filter: blur(0);
+        transform: translateY($fadeUpMiddle - 20px);
+        transition-duration: $duration / 2.2;
+      }
+
+      &:nth-of-type(9) {
+        transform: translateY($fadeUpMiddle - 50px);
+        transition-duration: $duration / 1.9;
+      }
+
+      &:nth-of-type(10) {
+        filter: blur(0);
+        transform: translateY($fadeUpMiddle - 40px);
+        transition-duration: $duration / 1.7;
+      }
 
       &.loaded {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
-        }
       }
     }
+
+    .subtitle {
+      font-size: 1.4rem;
+    }
+
+    .left-text {
+      transform: translateX($fadeLeft);
+      opacity: 0;
+      transition: transform $duration / 1.5 ease-out, opacity $duration ease;
+
+      &.loaded {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /*.middle-text {
+      transform: translate(-100px, $fadeUpMiddle);
+      opacity: 0;
+      transition: transform $duration / 1.8 ease-out, opacity $duration ease;
+
+      &.loaded {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }*/
+
+    .right-text {
+      transform: translateX($fadeRight);
+      opacity: 0;
+      transition: transform $duration / 1.2 ease-out, opacity $duration ease;
+
+      &.loaded {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+  }
 }
 
 .work-bg {
   background: #fdfdfd;
+
   .info-show {
     display: none;
   }
+
   h2 {
     font-size: 4rem;
   }
+
   .card-img-top {
     height: 25vw;
   }
+
   @include mQ(768px) {
+
     .card-img-top {
     height: auto;
     }
@@ -141,6 +218,7 @@ body {
 }
 
 .social {
+
   .btn-sm {
     padding: 0.3rem 0.7rem;
   }
@@ -160,10 +238,7 @@ body {
 .foot-link {
   font-size: 1.5rem;
   padding: 0;
-}
-
-@media screen and (max-width: 576px) {
-  .foot-link {
-    margin: 0 0.5rem;
+  @include mQPortrait(576px) {
+      margin: 0 0.5rem;
   }
 }

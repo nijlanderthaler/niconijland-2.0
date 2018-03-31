@@ -30,9 +30,8 @@ $(document).ready(function() {
     });
   });
 
-  // jumbotron title animation
+  // jumbotron text animation
   setTimeout(function () {
-    $('.letter').addClass('loaded');
-    $('.reg-text').addClass('loaded');
+    $(".letter, .up-text , .down-text, .left-text, .right-text").addClass('loaded');
   }, 1000);
 });
