@@ -31,7 +31,16 @@ $(document).ready(function() {
   });
 
   // jumbotron text animation
-  setTimeout(function () {
-    $(".letter, .up-text , .down-text, .left-text, .right-text").addClass('loaded');
+  setTimeout(function() {
+    setTimeout(function() {
+      setTimeout(function() {
+        setTimeout(function() {
+          $(".right-text").addClass("loaded");
+        }, 1200);
+        $(".middle-text").addClass("loaded");
+      }, 1150);
+      $(".left-text").addClass("loaded");
+    }, 1100);
+    $(".letter, .up-text , .down-text").addClass("loaded");
   }, 1000);
 });

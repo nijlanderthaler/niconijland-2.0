@@ -57,6 +57,11 @@ body {
     transform: translateX(-50%);
     opacity: 0.9;
     font-size: 1.7rem;
+    //-webkit-font-smoothing: antialiased;
+    @include mQPortrait(576px) {
+      top: 73%;
+      font-size: 1.5rem;
+    }
     //letter-spacing: 4px;
 
     span {
@@ -91,6 +96,9 @@ body {
       opacity: 0;
       filter: blur(5px);
 
+
+      // .com letters
+
       &:nth-of-type(2) {
        transform: translateY($fallDown + 40px);
        transition-duration: $duration / 2;
@@ -118,28 +126,6 @@ body {
         transition-duration: $duration / 2.3;
       }
 
-      &:nth-of-type(7) {
-        transform: translateY($fadeUpMiddle);
-        transition-duration: $duration / 2;
-      }
-
-      &:nth-of-type(8) {
-        filter: blur(0);
-        transform: translateY($fadeUpMiddle - 20px);
-        transition-duration: $duration / 2.2;
-      }
-
-      &:nth-of-type(9) {
-        transform: translateY($fadeUpMiddle - 50px);
-        transition-duration: $duration / 1.9;
-      }
-
-      &:nth-of-type(10) {
-        filter: blur(0);
-        transform: translateY($fadeUpMiddle - 40px);
-        transition-duration: $duration / 1.7;
-      }
-
       &.loaded {
         opacity: 1;
         transform: translateY(0);
@@ -149,41 +135,48 @@ body {
 
     .subtitle {
       font-size: 1.4rem;
+      @include mQPortrait(576px) {
+        font-size: 1.1rem;
+      }
     }
 
-    .left-text {
-      transform: translateX($fadeLeft);
+    .left-text,
+    .middle-text,
+    .right-text {
+      transition: transform $duration ease-out, filter $duration / 7 ease, opacity $duration ease;
       opacity: 0;
-      transition: transform $duration / 1.5 ease-out, opacity $duration ease;
+      filter: blur(5px);
+
+      &.loaded {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    // code that runs the classes independently through scss
+    /*.middle-text {
+      transition: transform $duration + 2.4s ease-out, filter $duration + 2.4s ease, opacity $duration + 2.4s ease;
+      opacity: 0;
+      filter: blur(5px);
 
       &.loaded {
         opacity: 1;
         transform: translateX(0);
+        filter: blur(0);
       }
     }
-
-    /*.middle-text {
-      transform: translate(-100px, $fadeUpMiddle);
-      opacity: 0;
-      transition: transform $duration / 1.8 ease-out, opacity $duration ease;
-
-      &.loaded {
-        opacity: 1;
-        transform: translate(0);
-      }
-    }*/
 
     .right-text {
-      transform: translateX($fadeRight);
+      transition: transform $duration + 3.6s ease-out, filter $duration + 3.6s ease, opacity $duration + 3.6s ease;
       opacity: 0;
-      transition: transform $duration / 1.2 ease-out, opacity $duration ease;
+      filter: blur(5px);
 
       &.loaded {
         opacity: 1;
         transform: translateX(0);
+        filter: blur(0);
       }
-    }
-
+    }*/
   }
 }
 

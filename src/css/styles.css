@@ -6224,15 +6224,32 @@ body {
     opacity: 0.9;
     font-size: 1.7rem;
     /*.middle-text {
-      transform: translate(-100px, $fadeUpMiddle);
+      transition: transform $duration + 2.4s ease-out, filter $duration + 2.4s ease, opacity $duration + 2.4s ease;
       opacity: 0;
-      transition: transform $duration / 1.8 ease-out, opacity $duration ease;
+      filter: blur(5px);
 
       &.loaded {
         opacity: 1;
-        transform: translate(0);
+        transform: translateX(0);
+        filter: blur(0);
+      }
+    }
+
+    .right-text {
+      transition: transform $duration + 3.6s ease-out, filter $duration + 3.6s ease, opacity $duration + 3.6s ease;
+      opacity: 0;
+      filter: blur(5px);
+
+      &.loaded {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
       }
     }*/ }
+    @media screen and (max-width: 576px) and (orientation: portrait) {
+      .jumbotron .jumbo-text {
+        top: 73%;
+        font-size: 1.5rem; } }
     .jumbotron .jumbo-text span {
       display: inline-block; }
     .jumbotron .jumbo-text .up-text {
@@ -6271,40 +6288,26 @@ body {
         filter: blur(0);
         transform: translateY(-180px);
         transition-duration: 2.17391s; }
-      .jumbotron .jumbo-text .letter:nth-of-type(7) {
-        transform: translateY(100px);
-        transition-duration: 2.5s; }
-      .jumbotron .jumbo-text .letter:nth-of-type(8) {
-        filter: blur(0);
-        transform: translateY(80px);
-        transition-duration: 2.27273s; }
-      .jumbotron .jumbo-text .letter:nth-of-type(9) {
-        transform: translateY(50px);
-        transition-duration: 2.63158s; }
-      .jumbotron .jumbo-text .letter:nth-of-type(10) {
-        filter: blur(0);
-        transform: translateY(60px);
-        transition-duration: 2.94118s; }
       .jumbotron .jumbo-text .letter.loaded {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0); }
     .jumbotron .jumbo-text .subtitle {
       font-size: 1.4rem; }
-    .jumbotron .jumbo-text .left-text {
-      transform: translateX(-150px);
-      opacity: 0;
-      transition: transform 3.33333s ease-out, opacity 5s ease; }
-      .jumbotron .jumbo-text .left-text.loaded {
-        opacity: 1;
-        transform: translateX(0); }
+      @media screen and (max-width: 576px) and (orientation: portrait) {
+        .jumbotron .jumbo-text .subtitle {
+          font-size: 1.1rem; } }
+    .jumbotron .jumbo-text .left-text,
+    .jumbotron .jumbo-text .middle-text,
     .jumbotron .jumbo-text .right-text {
-      transform: translateX(150px);
+      transition: transform 5s ease-out, filter 0.71429s ease, opacity 5s ease;
       opacity: 0;
-      transition: transform 4.16667s ease-out, opacity 5s ease; }
+      filter: blur(5px); }
+      .jumbotron .jumbo-text .left-text.loaded,
+      .jumbotron .jumbo-text .middle-text.loaded,
       .jumbotron .jumbo-text .right-text.loaded {
         opacity: 1;
-        transform: translateX(0); }
+        filter: blur(0); }
 
 .work-bg {
   background: #fdfdfd; }
