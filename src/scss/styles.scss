@@ -195,10 +195,49 @@ body {
     height: 25vw;
   }
 
+  .card-left {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+  }
+
+  .card-right {
+    padding-top: 2rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+  }
+
   @include mQ(768px) {
 
     .card-img-top {
     height: auto;
+    }
+
+    .card-left {
+      padding-top: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 1.5rem;
+      padding-left: 3rem;
+    }
+
+    .card-right {
+      padding-top: 1.5rem;
+      padding-right: 3rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  @include mQ(576px) {
+
+    .card-left {
+      padding: 1.5rem;
+    }
+
+    .card-right {
+      padding: 1.5rem;
     }
   }
 }

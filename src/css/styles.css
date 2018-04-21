@@ -6317,9 +6317,34 @@ body {
     font-size: 4rem; }
   .work-bg .card-img-top {
     height: 25vw; }
+  .work-bg .card-left {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem; }
+  .work-bg .card-right {
+    padding-top: 2rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem; }
   @media screen and (max-width: 768px) {
     .work-bg .card-img-top {
-      height: auto; } }
+      height: auto; }
+    .work-bg .card-left {
+      padding-top: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 1.5rem;
+      padding-left: 3rem; }
+    .work-bg .card-right {
+      padding-top: 1.5rem;
+      padding-right: 3rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1.5rem; } }
+  @media screen and (max-width: 576px) {
+    .work-bg .card-left {
+      padding: 1.5rem; }
+    .work-bg .card-right {
+      padding: 1.5rem; } }
 
 .about-image {
   background-image: url("https://github.com/nijlanderthaler/niconijland-com/blob/master/img/overloon-2.jpg?raw=true");
